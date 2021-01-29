@@ -1,4 +1,4 @@
 # edp-sliet-site
 
 This is Official Website of EDP SLIET
-Current Updated (30 nov 2020)
+Current Updated (29 Jan 2021)
