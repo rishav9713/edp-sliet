@@ -1,0 +1,837 @@
+html {
+  font-size: 62.5%;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* display: flex; */
+  justify-content: center;
+  font-family: "Roboto";
+  list-style: none;
+  box-sizing: border-box;
+  background: #000;
+  scroll-behavior: smooth;
+}
+
+/* for particles */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000;
+  /* background: #262626; */
+}
+
+
+
+nav {
+  position: fixed;
+  z-index: 100;
+  height: 8vh;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+
+nav .nav-links ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav .nav-links ul li {
+  padding: 0 0.4rem;
+  list-style: none;
+}
+
+nav .nav-links ul li img {
+  transform: scale(0.45);
+}
+
+section {
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* for scrolling animation */
+.scroll-down {
+  height: 5rem;
+  width: 3rem;
+  /* z-index: 2; */
+  /* border: 0.2rem solid black; */
+  position: absolute;
+  top: 60rem;
+  left: 65rem;
+  bottom: 2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 1rem;
+  width: 1rem;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 0.2rem solid white;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+.bg img {
+  width: 110vw;
+  height: 110vh;
+  filter: brightness(0.6);
+}
+
+.rock1 {
+  position: absolute !important;
+  left: 10vw !important;
+  top: 20vh !important;
+}
+
+.rock1 img {
+  width: 40%;
+  filter: brightness(0.5);
+}
+
+.text h1 {
+  font-family: "AlphaCentauri" !important;
+  font-size: 3vw;
+  color: #fff;
+  letter-spacing: 2rem;
+  position: relative;
+  top: 35vh;
+  left: 25vw;
+}
+
+.inputBox{
+  position: absolute;
+  width: 100rem;
+}
+
+.inputBox p{
+  padding: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 50vh;
+  left: 45vh;
+}
+
+/* padding: 3em;
+position: relative;
+top: 50%;
+color: #fff;
+transform: translateY(-10%);
+font-size: 2rem; */
+
+
+/* .para {
+  position: absolute; */
+  /* top: 13rem;
+  left: 30%; */
+  /* z-index: 10;
+  width: 50%;
+  height: 40rem;
+  overflow: hidden;
+}
+.para p {
+  font-size: 1.4rem;
+  color: #fff;
+  position: absolute; */
+  /* opacity: 0.8; */
+  /* line-height: 2.4rem; */
+  /* top: 40vh;
+  left: 25vw;
+}
+
+.para p span {
+  position: absolute;
+} */
+
+
+
+
+.earth img {
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  left: 34vw;
+  top: 25vh;
+  z-index: 1;
+  filter: brightness(0.4);
+}
+
+.mid {
+  left: -15rem !important;
+  bottom: -10rem !important;
+  top: unset !important;
+}
+
+.mid img {
+  width: 100%;
+  z-index: 2;
+  left: -2rem;
+  top: 20vh !important;
+  filter: brightness(0.8);
+}
+
+.fore {
+  right: -5rem !important;
+  bottom: -20rem !important;
+  top: 0rem !important;
+  left: unset !important;
+}
+
+.fore img {
+  width: 40rem;
+  height: 110vh;
+  z-index: 3;
+  filter: brightness(0.5);
+}
+
+/* SWIPER */
+
+#sectiontwo {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.head {
+  align-items: center;
+}
+
+.head h4 {
+  position: absolute;
+  left: 49rem;
+  top: 0;
+  color: #fff;
+  font-size: 3rem;
+}
+
+/* .rockbg1 {
+  position: absolute;
+  transform: scale(0.2);
+  filter: brightness(0.2);
+  top: 20vh;
+  left: 0;
+  z-index: 1;
+} */
+
+.planet-links {
+  width: 95%;
+  height: 5vh;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.planet-links .swiper-pagination-bullet {
+  opacity: 0.2;
+  outline: none;
+}
+.planet-links .swiper-pagination-bullet-active {
+  color: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: transparent;
+}
+
+.swiper-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5rem 0;
+}
+
+.swiper-wrapper {
+  transition-delay: 0.5s;
+}
+
+.swiper-slide {
+  height: 40rem !important;
+  width: 90% !important;
+  background: transparent;
+}
+
+.swiper-slide:nth-child(1) .slide-img {
+  background-image: url("images/mercury.png");
+  filter: brightness(1.25);
+}
+.swiper-slide:nth-child(2) .slide-img {
+  background-image: url("images/venus.png");
+  filter: brightness(1.25);
+}
+.swiper-slide:nth-child(3) .slide-img {
+  background-image: url("images/earth1.png");
+  filter: brightness(2.5);
+}
+.swiper-slide:nth-child(4) .slide-img {
+  background-image: url("images/mars.png");
+  filter: brightness(2);
+}
+.swiper-slide:nth-child(5) .slide-img {
+  background-image: url("images/jupiter.png");
+  filter: brightness(1);
+}
+.swiper-slide:nth-child(6) .slide-img {
+  background-image: url("images/saturn.png");
+  filter: brightness(1);
+}
+/* .swiper-slide:nth-child(7) .slide-img {
+  background-image: url("images/uranus.png");
+}
+.swiper-slide:nth-child(8) .slide-img {
+  background-image: url("images/neptune.png");
+} */
+
+.slide-img {
+  background-position: "center";
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  width: 30%;
+  height: 100%;
+}
+
+.slide-number {
+  position: absolute;
+  top: -30px;
+  left: 30%;
+  width: 40rem;
+  height: 12rem;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.slide-number p {
+  font-size: 4rem;
+  font-family: "AlphaCentauri" !important;
+  color: #fff;
+  position: relative;
+}
+
+.slide-number p span {
+  position: absolute;
+}
+
+.slide-detail {
+  position: absolute;
+  top: 13rem;
+  left: 30%;
+  z-index: 10;
+  width: 50%;
+  height: 40rem;
+  overflow: hidden;
+}
+
+.slide-detail p {
+  font-size: 1.4rem;
+  color: #fff;
+  position: relative;
+  opacity: 0.8;
+  line-height: 2.4rem;
+}
+
+.slide-detail p span {
+  position: absolute;
+}
+
+.slide-detail-facts {
+  position: absolute;
+  top: 33rem;
+  left: 30%;
+  z-index: 10;
+  width: 50%;
+  height: 40rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.slide-detail-facts div {
+  display: flex;
+  position: relative;
+}
+.slide-detail-facts div h5 {
+  margin-right: 2rem;
+}
+
+.slide-text {
+  position: absolute;
+  top: -15rem;
+  left: 22%;
+  z-index: 9;
+  width: 20rem;
+  height: 40rem;
+  overflow: hidden;
+  opacity: 0.1 !important;
+}
+
+.slide-text h4 {
+  color: #fff;
+  font-size: 10rem;
+  position: relative;
+}
+.slide-text h4 span {
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for responsive */
+
+
+
+    /* @media(max-width:1200px) {
+      html {
+        font-size: 65%;
+      }
+
+      .text h1 {
+        font-family: "AlphaCentauri" !important;
+        font-size: 4vw;
+        color: #fff;
+        letter-spacing: 2rem;
+        position: relative;
+        top: 30vh;
+        left: 20vw;
+      }
+
+
+      .inputBox {
+        position: absolute;
+        width: 90rem;
+      }
+
+      .inputBox p{
+        padding: 1rem;
+        font-size: 2.5rem;
+        color: #fff;
+        position: relative;
+        top: 55vh;
+        left: 20vw;
+      }
+
+    } */
+
+
+ @media(max-width:998px) {
+  html {
+    font-size: 55%;
+  }
+
+  .scroll-down {
+    height: 4rem;
+    width: 2rem;
+    /* z-index: 2; */
+    /* border: 0.2rem solid black; */
+    position: absolute;
+    top: 560px;
+    left: 440px;
+    bottom: 0.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+
+
+  .text h1 {
+    font-family: "AlphaCentauri" !important;
+    font-size: 5vw;
+    color: #fff;
+    letter-spacing: 2rem;
+    position: relative;
+    top: 40vh;
+    left: 20vw;
+  }
+
+
+  .inputBox {
+    position: absolute;
+    width: 80rem;
+  }
+
+  .inputBox p{
+    padding: 1rem;
+    font-size: 2.5rem;
+    color: #fff;
+    position: relative;
+    top: 50vh;
+    left: 15vw;
+  }
+
+
+  .slide-detail-facts {
+    position: absolute;
+    top: 30px;
+    left: 30%;
+
+  }
+
+  .slide-detail-facts div {
+    display: flex;
+    position: fixed;
+  }
+  .slide-detail-facts div h5 {
+    margin-right: 2rem;
+    font-size: 10px;
+  }
+
+  .slide-detail {
+    position: absolute;
+    top: 13rem;
+    left: 30%;
+    z-index: 10;
+    width: 50%;
+    height: 50rem;
+    overflow: hidden;
+  }
+
+  .slide-detail p {
+    font-size: 1.3rem;
+    color: #fff;
+    position: relative;
+    opacity: 0.8;
+    line-height: 15px;
+  }
+
+  .head h4 {
+    position: absolute;
+    left: 35rem;
+    top: 0;
+    color: #fff;
+    font-size: 3rem;
+  }
+}
+
+
+
+
+@media(max-width:768px) {
+  html {
+    font-size: 45%;
+  }
+
+  .scroll-down {
+    height: 4rem;
+    width: 2rem;
+    /* z-index: 2; */
+    /* border: 0.2rem solid black; */
+    position: absolute;
+    top: 560px;
+    left: 350px;
+    bottom: 0.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+
+  .text h1 {
+    font-family: "AlphaCentauri" !important;
+    font-size: 7vw;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: 2rem;
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+  }
+
+
+  .inputBox{
+    position: relative;
+    width: 50rem;
+  }
+
+  .inputBox p{
+    padding: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    position: relative;
+    top: 40vh;
+    left: 30vh;
+  }
+
+  .slide-detail-facts {
+    position: absolute;
+    top: 39px;
+    left: 40%;
+  }
+
+  .slide-detail-facts div {
+    display: flex;
+    position: fixed;
+  }
+  .slide-detail-facts div h5 {
+    margin-right: 2rem;
+    font-size: 10px;
+  }
+
+
+
+
+  .swiper-slide {
+    height: 54rem !important;
+    width: 90% !important;
+    background: transparent;
+  }
+
+
+
+
+  .slide-detail {
+    top: 100px;
+    left: 10%;
+    z-index: 5;
+    width: 80%;
+    height: 250%;
+  }
+
+  .slide-detail p {
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.8;
+    line-height: 17px;
+  }
+
+
+  .slide-number {
+    position: absolute;
+    top: -30px;
+    left: 35%;
+    width: 30rem;
+    height: 13rem;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .slide-number p {
+    font-size: 4rem;
+    font-family: "AlphaCentauri" !important;
+    color: #fff;
+    position: relative;
+  }
+
+  .head h4 {
+    position: absolute;
+    left: 35rem;
+    top: 0;
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  /* .planet-links {
+    width: 7%;
+    height: 5vh;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+  } */
+
+}
+
+
+@media(max-width:480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .scroll-down {
+    height: 4rem;
+    width: 2rem;
+    /* z-index: 2; */
+    /* border: 0.2rem solid black; */
+    position: absolute;
+    top: 550px;
+    left: 225px;
+    bottom: 0.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+
+  .text h1 {
+    font-family: "AlphaCentauri" !important;
+    font-size: 7vw;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: 2rem;
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+  }
+
+
+  .inputBox{
+    position: relative;
+    width: 55rem;
+  }
+
+  .inputBox p{
+    padding: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    top: 35vh;
+    left: 10vh;
+  }
+
+  .head h4 {
+    position: absolute;
+    left: 10rem;
+    top: 0;
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  .slide-detail {
+    top: 100px;
+    left: 10%;
+    z-index: 5;
+    width: 80%;
+    height: 255%;
+  }
+
+  .slide-detail p {
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.8;
+    line-height: 15px;
+  }
+
+}
+
+
+@media(max-width:400px){
+
+  .scroll-down {
+    height: 4rem;
+    width: 2rem;
+    /* z-index: 2; */
+    /* border: 0.2rem solid black; */
+    position: absolute;
+    top: 550px;
+    left: 180px;
+    bottom: 0.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+
+  .text h1 {
+    font-family: "AlphaCentauri" !important;
+    font-size: 9vw;
+    color: #fff;
+    letter-spacing: 2rem;
+    position: relative;
+    top: 20vh;
+    left: 20vw;
+  }
+
+
+  .inputBox {
+    position: absolute;
+    width: 50rem;
+  }
+
+  .inputBox p{
+    padding: 1rem;
+    font-size: 2.5rem;
+    color: #fff;
+    position: absolute;
+    top: 50vh;
+    left: 8vw;
+  }
+
+  .head h4 {
+    position: absolute;
+    left: 15rem;
+    top: 0;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .slide-detail {
+    top: 100px;
+    left: 10%;
+    z-index: 5;
+    width: 80%;
+    height: 275%;
+  }
+
+  .slide-detail p {
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.8;
+    line-height: 15px;
+  }
+}
